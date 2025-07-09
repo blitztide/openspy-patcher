@@ -79,7 +79,7 @@ if __name__ == "__main__":
             prog="Openspy Patcher",
             description="Easy patcher utility to add openspy compatability to binaries")
     parser.add_argument("filename")
-    parser.add_argument("-i","--inline",help="Patch binary inline (modifies original file)", default=False)
+    parser.add_argument("-i","--inline",help="Patch binary inline (modifies original file)", default=False, action='store_true')
     parser.add_argument("-o","--output",help="What filename to write the output to")
     args = parser.parse_args()
     patch(args.filename,args.inline, args.output)
